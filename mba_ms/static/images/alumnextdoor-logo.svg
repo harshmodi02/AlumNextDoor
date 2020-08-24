@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="356" height="133" viewBox="0 0 356 133">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fc0;
+      }
+
+      .cls-2 {
+        fill: #f06001;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>AlumNextDoor</title>
+  <g id="Logo">
+    <polygon id="Behind" class="cls-1" points="71 113 71 51 38 34 39 94 18 84 18 0 35 9 38 11 90 40 90 40 90 40 91 123 71 113"/>
+    <polygon id="Front" class="cls-2" points="52 123 52 61 19 44 20 104 0 94 0 10 16 19 19 21 72 50 71 50 71 50 72 133 52 123"/>
+  </g>
+  <g id="Text">
+    <g>
+      <path class="cls-3" d="M0,0ZM0,0Z" transform="translate(-5 -2)"/>
+      <path class="cls-3" d="M0,0Z" transform="translate(-5 -2)"/>
+      <path class="cls-3" d="M0,0Z" transform="translate(-5 -2)"/>
+      <path class="cls-3" d="M0,0Z" transform="translate(-5 -2)"/>
+      <path class="cls-3" d="M0,0Z" transform="translate(-5 -2)"/>
+      <path class="cls-3" d="M0,0ZM0,0Z" transform="translate(-5 -2)"/>
+      <path class="cls-3" d="M0,0Z" transform="translate(-5 -2)"/>
+      <path class="cls-3" d="M0,0Z" transform="translate(-5 -2)"/>
+      <path class="cls-3" d="M0,0ZM0,0Z" transform="translate(-5 -2)"/>
+      <path class="cls-3" d="M0,0ZM0,0Z" transform="translate(-5 -2)"/>
+      <path class="cls-3" d="M0,0ZM0,0Z" transform="translate(-5 -2)"/>
+      <path class="cls-3" d="M0,0Z" transform="translate(-5 -2)"/>
+    </g>
+  </g>
+</svg>

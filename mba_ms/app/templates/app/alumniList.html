@@ -1,0 +1,138 @@
+{% load static %}
+
+<section class="portfolio-area portfolio-three pb-40">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="portfolio-menu-3 text-center">
+                    <ul>
+                        <li data-filter="*" class="active">MENTORS FOR YOU</li>
+                    </ul>
+                </div> <!-- portfolio menu -->
+            </div>
+        </div> <!-- row -->
+        <div class="row grid-3">
+            {% if degree == "1" %}
+                {% if alumni_details %}
+                    {% for alumni_detail in alumni_details %}
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="single-portfolio mt-30">                    
+                            <div class="portfolio-text">
+                                <h4 class="portfolio-title">{{alumni_detail.name}}
+                                    <!-- <a href="{{ alumni_detail.a_linkedin }}" target="_blank"><span><i class="lni-linkedin-original" style="color: #0072b1;"></i></span></a> -->
+                                </h4>
+                                <p class="text"><span style="font-weight: bold;">Batch</span> - {{alumni_detail.school_batch}}</p>
+                                <p class="text"><span style="font-weight: bold;">Pre MBA Education</span> - {{ alumni_detail.pre_mba_education }}</p>
+                                <p class="text"><span style="font-weight: bold;">Pre MBA Experience</span> - {{ alumni_detail.pre_mba_job_role }}</p>
+                                <p class="text"><span style="font-weight: bold;">Post MBA Experience</span> - {{ alumni_detail.post_mba_job_role }}</p>
+                                <div class="row">
+                                    <div class="col-lg-3 col-sm-6">
+                                        <div class="standard-buttons mt-10">
+                                            <a href="#" class="main-btn standard-one sm-btn" data-toggle="modal" data-target="#id{{alumni_detail.id}}">Details</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="standard-buttons mt-10">
+                                            <a href="https://forms.gle/YxzetYX7YuBKXqqa6" target="_blank" class="main-btn standard-three sm-btn pt-1">Pick Mentor</a>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div> <!-- single portfolio -->
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="id{{alumni_detail.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">{{alumni_detail.name}}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                {{ alumni_detail.long_description|safe|linebreaksbr }}
+                            </div>
+                            <div class="modal-footer">
+                            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                            <div class="standard-buttons mt-10">
+                                <a href="#" class="main-btn standard-one sm-btn" data-dismiss="modal">CLOSE</a>
+                                <a href="https://forms.gle/YxzetYX7YuBKXqqa6" target="_blank" class="main-btn standard-three sm-btn pt-1">Pick Mentor</a>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    {% endfor %}
+
+                {% else %}
+                    <p class="mt-50">Couldn't find a match? We'll help you get started. Send us your details <a class="page-scroll" href="https://forms.gle/YxzetYX7YuBKXqqa6" target="_blank">here</a> and we'll connect you to a mentor as soon as possible!</p>
+                {% endif %}
+
+            {% else %}
+                {% if alumni_details %}
+                    {% for alumni_detail in alumni_details %}
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="single-portfolio mt-30">                    
+                            <div class="portfolio-text">
+                                <h4 class="portfolio-title">{{alumni_detail.name}}
+                                    <!-- <a href="{{ alumni_detail.a_linkedin }}" target="_blank"><span><i class="lni-linkedin-original" style="color: #0072b1;"></i></span></a> -->
+                                </h4>
+                                <p class="text"><span style="font-weight: bold;">Batch</span> - {{alumni_detail.school_batch}}</p>
+                                <p class="text"><span style="font-weight: bold;">Pre MS Education</span> - {{ alumni_detail.pre_ms_education }}</p>
+                                <p class="text"><span style="font-weight: bold;">Pre MS Experience</span> - {{ alumni_detail.pre_ms_job_role }}</p>
+                                <p class="text"><span style="font-weight: bold;">Post MS Experience</span> - {{ alumni_detail.post_ms_job_role }}</p>
+                                <div class="row">
+                                    <div class="col-lg-3 col-sm-6">
+                                        <div class="standard-buttons mt-10">
+                                            <a href="#" class="main-btn standard-one sm-btn" data-toggle="modal" data-target="#id{{alumni_detail.id}}">Details</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="standard-buttons mt-10">
+                                            <a href="https://forms.gle/cNfaXikHqEquhrUr5" target="_blank" class="main-btn standard-three sm-btn pt-1">Pick Mentor</a>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div> <!-- single portfolio -->
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="id{{alumni_detail.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">{{alumni_detail.name}}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                {{ alumni_detail.long_description|safe|linebreaksbr }}
+                            </div>
+                            <div class="modal-footer">
+                            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                            <div class="standard-buttons mt-10">
+                                <a href="#" class="main-btn standard-one sm-btn" data-dismiss="modal">CLOSE</a>
+                                <a href="https://forms.gle/cNfaXikHqEquhrUr5" target="_blank" class="main-btn standard-three sm-btn pt-1">Pick Mentor</a>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                {% else %}
+                    <p class="mt-50">Couldn't find a match? We'll help you get started. Send us your details <a class="page-scroll" href="https://forms.gle/cNfaXikHqEquhrUr5" target="_blank">here</a> and we'll connect you to a mentor as soon as possible!</p>
+                {% endif %}
+                
+            {% endif %}
+            
+        </div> <!-- row -->
+    </div> <!-- container -->
+
+</section> 

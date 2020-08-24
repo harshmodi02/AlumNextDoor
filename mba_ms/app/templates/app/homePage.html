@@ -1,0 +1,1343 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!--====== Global site tag (gtag.js) - Google Analytics ======-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169020526-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169020526-1');
+    </script>
+
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Connect with alumni of your dream grad school (MBA/MS). Choose a mentor with a similar profile & get help with your MBA/MS admission essays and interviews.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Alum Next Door | Find a Mentor for your MBA/MS Applications" />
+    <meta property="og:url" content="https://alumnextdoor.com/" />
+    <meta property="og:image" content="https://images.pexels.com/photos/4226262/pexels-photo-4226262.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+    <meta property="og:description" content="Connect with alumni of your dream grad school (MBA/MS). Choose a mentor with a similar profile & get help with your MBA/MS admission essays and interviews." />
+
+    <!--====== Title ======-->
+    <title>Alum Next Door | Find a Mentor for your MBA/MS Applications</title>
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="{% static 'images/alumnextdoor-favicon.png' %}" type="image/png">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!--====== Line Icons css ======-->
+    <link rel="stylesheet" href="{% static 'css/LineIcons-min.css' %}">
+
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+
+    <!--====== Nice Select css ======-->
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="{% static 'css/default-min.css' %}">
+
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!--====== jquery js ======-->
+    <script src="{% static 'js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    
+
+    <style>
+        .dropdown-menu {
+            max-height:200px;
+            overflow:scroll; 
+        }
+        .services-content a h4:hover{
+            background: -webkit-linear-gradient( #0067f4 0%, #2bdbdc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .team-content .name{
+            font-size: 5px;
+        }
+        @media(max-width: 600px) {
+            .team-style-ten .team-image img{
+                width: 30%;
+                height: 30%;
+            }
+        }
+        
+    </style>
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Alum Next Door",
+        "url": "https://alumnextdoor.com/",
+        "logo": "",
+        "sameAs": "https://alumnextdoor.com/"
+        }
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '302524030784050');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=302524030784050&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+</head>
+
+<body>
+    <script>
+        fbq('track', 'ViewContent');
+    </script>
+    <script>
+        fbq('track', 'Contact');
+    </script>
+    <script>
+        fbq('track', 'Lead');
+    </script>
+    <script>
+        fbq('track', 'SubmitApplication');
+    </script>
+    <!--====== HOME PART START ======-->
+
+    <section class="header-area header-one">
+
+        <div class="navbar-area navbar-one navbar-transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="{% url 'home' %}">
+                                <img src="{% static 'images/alumnextdoor-logo.png' %}" style="width: 160px; height: 60px;padding-bottom: 1.5%;" alt="Logo">
+                            </a>
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
+                                <ul class="navbar-nav ml-50">
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#howitworks">HOW IT WORKS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#choosementors">CHOOSE MENTORS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#testimonials">TESTIMONIALS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="{% url 'blog-page' %}">BLOG</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#contact">CONTACT</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- <div class="navbar-btn d-none d-sm-inline-block">
+                                <ul>
+                                    <li><a class="solid page-scroll" href="https://forms.gle/fwzXNPvh8JBkxCLVA" target="_blank">MENTOR SIGNUP</a></li>
+                                </ul>
+                            </div> -->
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div>
+
+        <div class="header-content-area d-flex align-items-center" >
+            <div class="container">
+                <div class="row" style="margin-top: -5%;">
+                    <div class="col-lg-12">
+                        <div class="header-wrapper">
+                            <div class="header-content">
+                                <h1 class="header-title">Get into your Dream<span>Grad School!</span></h1>
+                                <p class="text">Connect with alumni of your dream grad school (MBA/MS). Choose a mentor with a similar profile & get help with your MBA/MS admission essays and interviews.</p>
+                                <p class="text">Welcome to <span style="font-weight: bold; ">Alum Next Door</span>, a place where your dream school alumni is as reachable as your next-door neighbour!</p>
+                                <div class="header-btn light-rounded-buttons">
+                                    <a class="main-btn light-rounded-two page-scroll" href="#howitworks">Alright, I'm in!</a>
+                                </div>
+                            </div> <!-- header content -->
+
+                            <div class="header-image d-none d-lg-block" style="width: 53%;margin-top: 4%;">
+                                <div class="image" >
+                                    <img src="{% static 'images/header/header-1a.svg' %}" alt="Header">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <div class="header-shape">
+                <img src="{% static 'images/header/header-shape-2.svg' %}" alt="shape">
+            </div> <!-- header-shape -->
+        </div> <!-- header content area -->
+    </section>
+
+    <!--====== HOME PART END ======-->
+
+
+
+    <!--====== SERVICES PART START ======-->
+
+    <section id="howitworks" class="services-area services-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-10">
+                        <h2 class="title">How We Help You</h2>
+                        <p class="text">We help you find mentor(s) best suited for your profile and who walked the same path as yours before they got into your dream school.</p>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="services-content mt-40 d-sm-flex">
+                                <div class="services-icon">
+                                    <i class="lni-school-compass"></i>
+                                </div>
+                                <div class="services-content media-body">
+                                    <h4 class="services-title">Choose a mentor</h4>
+                                    <p class="text">Use our advanced search tool to choose prospective mentor(s).</p>
+                                </div>
+                            </div> <!-- services content -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="services-content mt-40 d-sm-flex">
+                                <div class="services-icon">
+                                    <i class="lni-laptop-phone"></i>
+                                </div>
+                                <div class="services-content media-body">
+                                    <h4 class="services-title">Schedule a meeting</h4>
+                                    <p class="text">Fill our contact form and we will arrange a meeting between you and your mentor.</p>
+                                </div>
+                            </div> <!-- services content -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="services-content mt-40 d-sm-flex">
+                                <div class="services-icon">
+                                    <i class="lni-zoom-in"></i>
+                                </div>
+                                <div class="services-content media-body">
+                                    <h4 class="services-title">Essay reviews & Mock interviews</h4>
+                                    <p class="text">Get services like essay/SOP/LOR reviews, ding analysis, profile evaluation &/or general discussions and practice mock interviews with your chosen mentor.</p>
+                                </div>
+                            </div> <!-- services content -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="services-content mt-40 d-sm-flex">
+                                <div class="services-icon">
+                                    <i class="lni-coin"></i>
+                                </div>
+                                <div class="services-content media-body">
+                                    <h4 class="services-title">What are the charges?</h4>
+                                    <p class="text">We take no commission as a platform. Mentors charge a negotiable price which is a fraction of the charges of similar services out there making us truly value for money!</p>
+                                </div>
+                            </div> <!-- services content -->
+                        </div>
+                        <div class="col-md-12" style="text-align: center; margin-top: 5%;">
+                            <div class="rounded-buttons" >
+                                <a href="#faqs" class="main-btn rounded-six page-scroll"> <span><i class="lni-hand"></i></span>FAQs</a>
+                            </div>
+                        </div>
+                    </div> <!-- row -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div class="services-image d-lg-flex align-items-center">
+            <div class="image">
+                <img src="{% static 'images/services/services-1a.svg' %}" alt="Services">
+            </div>
+        </div> <!-- services image -->
+    </section>
+
+    <!--====== SERVICES PART ENDS ======-->
+
+
+
+    <!--====== ALUMNI LIST PART START ======-->
+
+    <section id="choosementors" class="call-action-area call-action-one pb-100" style="background-color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="call-action-content d-lg-flex justify-content-between align-items-center">
+                        <div class="call-action-text mt-100">
+                            <h3 class="action-title">Choose a mentor that fits your profile</h3>
+                            <p class="text">
+                                Choose your target school and industry/major to find prospective mentors. 
+                                Browse profiles and choose your best fit. Fill out the mentor form, sit back and relax. 
+                                We’ll get it touch with you. 
+                            </p>
+                            <br><small>NOTE - A mentor profile is shown for all the schools they got an admit from. For more indepth details, click the 'Details' button on each mentor profile.</small>
+                            <p class="text">Can’t find a match, contact us <a href="https://forms.gle/YxzetYX7YuBKXqqa6" target="_blank">here for MBA</a> & <a href="https://forms.gle/cNfaXikHqEquhrUr5" target="_blank">here for MS</a></p>
+                        </div>
+                    </div> <!-- call action content -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-4 col-sm-12 mt-50">
+                    <h5 style="padding-bottom: 5px;">Choose your degree : </h5>
+                        <div class="dropdown" id="degree" name="degree">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle degree-toggle" data-toggle="dropdown">
+                              Select
+                            </button>
+                            <div class="dropdown-menu degree-menu">
+                                <ul>
+                                    <li value="1" style="line-height: 30px;">MBA</li>
+                                    <li value="2" style="line-height: 30px;">MS</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span style="display:none;color:red;" id="err_degree">Please select a degree</span>
+                </div>
+                <div class="col-lg-8 col-sm-12" id="mba_dropdowns">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12 mt-50">
+                            <h5 style="padding-bottom: 5px;">Choose your target school : </h5>
+                                <div class="dropdown" id="school" name="school">
+                                    <button type="button" class="btn btn-outline-primary dropdown-toggle school-toggle" data-toggle="dropdown">
+                                      Select
+                                    </button>
+                                    <div class="dropdown-menu school-menu">
+                                        <ul>
+                                            {% for school_name in school %}
+                                            <li value="{{school_name.id}}" style="line-height: 30px;">{{ school_name }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <span style="display:none;color:red;" id="err_school">Please select a school</span>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 mt-50">
+                            <h5 style="padding-bottom: 5px;">Choose your industry : </h5>
+                                <div class="dropdown" id="industry">
+                                    <button type="button" class="btn btn-outline-primary dropdown-toggle industry-toggle" data-toggle="dropdown">
+                                      Select
+                                    </button>
+                                    <div class="dropdown-menu industry-menu">
+                                        <ul id="industry-ul">
+                                            <!-- <li style="line-height: 30px;">TESTIBG</li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <span style="display:none;color:red;" id="err_industry">Please select an industry</span>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-8 col-sm-12" id="ms_dropdowns">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12 mt-50">
+                            <h5 style="padding-bottom: 5px;">Choose your target major : </h5>
+                            <div class="dropdown" id="major_ms" name="major_ms">
+                                <button type="button" class="btn btn-outline-primary dropdown-toggle majorms-toggle" data-toggle="dropdown">
+                                    Select
+                                </button>
+                                <div class="dropdown-menu majorms-menu">
+                                    <ul>
+                                        {% for major_ms in major_ms %}
+                                        <li value="{{major_ms.id}}" style="line-height: 30px;">{{ major_ms }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <span style="display:none;color:red;" id="err_major_ms">Please select a major</span>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 mt-50">
+                            <h5 style="padding-bottom: 5px;">Choose your target major : </h5>
+                            <div class="dropdown" id="school_ms" name="school_ms">
+                                <button type="button" class="btn btn-outline-primary dropdown-toggle schoolms-toggle" data-toggle="dropdown">
+                                    Select
+                                </button>
+                                <div class="dropdown-menu schoolms-menu">
+                                    <ul id="schoolms-ul">
+                                        <!-- <li style="line-height: 30px;">TESTIBG</li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <span style="display:none;color:red;" id="err_school_ms">Please select a major</span>
+                        </div>
+                    </div> 
+                </div>
+                
+                
+                <div class="col-lg-12 call-action-btn mt-50 rounded-buttons">
+                        <a class="main-btn rounded-six page-scroll" style="color: white;" onclick="downloadClicked()"> <span><i class="lni-users"></i></span>Find Your Mentor</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 mt-50">
+                    <div id="AlumniListDiv">
+                    </div>
+                </div>
+            </div>
+        </div> <!-- container -->
+    </section>
+
+    <!--====== ALUMNI LIST PART ENDS ======-->
+
+
+
+    <!--====== TESTIMONIAL PART START ======-->
+
+    <section id="testimonials" class="testimonial-one" style="background-color: #f5f6f8;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section-title pb-20 text-center">
+                        <h3 class="title">Success Stories</h3>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            
+            <div class="row testimonial-one-active">
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/testimonial/lingchen.jpeg' %}" style="margin-bottom: -10%;" alt="Author">
+                        </div>
+                        <div class="testimonial-content">
+                            <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p> -->
+                            <h6 class="author-name">Lingchen</h6>
+                            <span class="sub-title">Cornell - J School of Management</span>
+                            <br><a href="https://www.linkedin.com/in/lingchen-li/" target="_blank"><i class="lni-linkedin-original"></i></a>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/testimonial/swagita.jpeg' %}" style="margin-bottom: -10%;" alt="Author">
+                        </div>
+                        <div class="testimonial-content">
+                            <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p> -->
+                            <h6 class="author-name">Swagita Pawah</h6>
+                            <span class="sub-title">ISB CO 2020 PGP</span>
+                            <br><a href="https://www.linkedin.com/in/swagitapawah/" target="_blank"><i class="lni-linkedin-original"></i></a>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/testimonial/tushar.jpeg' %}" style="margin-bottom: -10%;" alt="Author">
+                        </div>
+                        <div class="testimonial-content">
+                            <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p> -->
+                            <h6 class="author-name">Tushar Sharma</h6>
+                            <span class="sub-title">ISB CO 2020 PGP</span>
+                            <br><a href="https://www.linkedin.com/in/tushsha/" target="_blank"><i class="lni-linkedin-original"></i></a>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/testimonial/varun.jpeg' %}" style="margin-bottom: -10%;" alt="Author">
+                        </div>
+                        <div class="testimonial-content">
+                            <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p> -->
+                            <h6 class="author-name">Varun Kant</h6>
+                            <span class="sub-title">ISB CO 2020 PGP</span>
+                            <br><a href="https://www.linkedin.com/in/varunkant/" target="_blank"><i class="lni-linkedin-original"></i></a>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/testimonial/ritika.jpeg' %}" style="margin-bottom: -10%;" alt="Author">
+                        </div>
+                        <div class="testimonial-content">
+                            <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p> -->
+                            <h6 class="author-name">Ritika Siraj</h6>
+                            <span class="sub-title">ISB CO 2020 PGP</span>
+                            <br><a href="https://www.linkedin.com/in/ritika-siraj-249a56123/" target="_blank"><i class="lni-linkedin-original"></i></a>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/testimonial/pragya.jpeg' %}" style="margin-bottom: -10%;" alt="Author">
+                        </div>
+                        <div class="testimonial-content">
+                            <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p> -->
+                            <h6 class="author-name">Pragya Prakash</h6>
+                            <span class="sub-title">ISB CO 2020 PGP</span>
+                            <br><a href="https://www.linkedin.com/in/pragya-prakash-161a2b79" target="_blank"><i class="lni-linkedin-original"></i></a>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/testimonial/tanay.jpeg' %}" style="margin-bottom: -10%;" alt="Author">
+                        </div>
+                        <div class="testimonial-content">
+                            <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p> -->
+                            <h6 class="author-name">Tanay Baldua</h6>
+                            <span class="sub-title">ISB CO 2020 PGP</span>
+                            <br><a href="https://www.linkedin.com/in/tanay-baldua-b560a118/" target="_blank"><i class="lni-linkedin-original"></i></a>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/testimonial/meha.jpeg' %}" style="margin-bottom: -10%;" alt="Author">
+                        </div>
+                        <div class="testimonial-content">
+                            <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p> -->
+                            <h6 class="author-name">Meha Mathur</h6>
+                            <span class="sub-title">ISB CO 2020 PGP</span>
+                            <br><a href="https://www.linkedin.com/in/meha-mathur-b6a4ba49" target="_blank"><i class="lni-linkedin-original"></i></a>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/testimonial/anurag.jpeg' %}" style="margin-bottom: -10%;" alt="Author">
+                        </div>
+                        <div class="testimonial-content">
+                            <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p> -->
+                            <h6 class="author-name">Anurag Singh</h6>
+                            <span class="sub-title">ISB CO 2020 PGP</span>
+                            <br><a href="https://www.linkedin.com/in/anurag-singh-56796484" target="_blank"><i class="lni-linkedin-original"></i></a>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/testimonial/abhilash.jpeg' %}" style="margin-bottom: -10%;" alt="Author">
+                        </div>
+                        <div class="testimonial-content">
+                            <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p> -->
+                            <h6 class="author-name">Abhilash Savalgi</h6>
+                            <span class="sub-title">ISB CO 2020 PGP</span>
+                            <br><a href="https://www.linkedin.com/in/abhilash-savalgi-33162b57/" target="_blank"><i class="lni-linkedin-original"></i></a>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/testimonial/shreya.jpeg' %}" style="margin-bottom: -10%;" alt="Author">
+                        </div>
+                        <div class="testimonial-content">
+                            <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p> -->
+                            <h6 class="author-name">Shreya Doreswamy</h6>
+                            <span class="sub-title">ISB CO 2020 PGP</span>
+                            <br><a href="https://www.linkedin.com/in/shreya-doreswamy-b251bb146" target="_blank"><i class="lni-linkedin-original"></i></a>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/testimonial/deepali.jpeg' %}" style="margin-bottom: -10%;" alt="Author">
+                        </div>
+                        <div class="testimonial-content">
+                            <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p> -->
+                            <h6 class="author-name">Deepali Mittal</h6>
+                            <span class="sub-title">ISB CO 2020 PGP</span>
+                            <br><a href="https://www.linkedin.com/in/deepali-mittal-2866745b/" target="_blank"><i class="lni-linkedin-original"></i></a>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/testimonial/siddharth.jpeg' %}" style="margin-bottom: -10%;" alt="Author">
+                        </div>
+                        <div class="testimonial-content">
+                            <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p> -->
+                            <h6 class="author-name">Siddharth Tripathi</h6>
+                            <span class="sub-title">ISB YLP Batch 2022</span>
+                            <br><a href="https://www.linkedin.com/in/siddharth-shankar-tripathi-a99047b4/" target="_blank"><i class="lni-linkedin-original"></i></a>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/testimonial/sanil.jpeg' %}" style="margin-bottom: -10%;" alt="Author">
+                        </div>
+                        <div class="testimonial-content">
+                            <!-- <p class="text">Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!</p> -->
+                            <h6 class="author-name">Sanil Basutkar</h6>
+                            <span class="sub-title">ISB CO 2020 PGP</span>
+                            <br><a href="https://www.linkedin.com/in/sanilbasutkar/" target="_blank"><i class="lni-linkedin-original"></i></a>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-testimonial mt-30 text-center">
+                        <div class="testimonial-image">
+                            <!-- <img src="{% static 'images/testimonial/anurag.jpeg' %}" style="margin-bottom: -10%;" alt="Author"> -->
+                        </div>
+                        <div class="testimonial-content">
+                            <h6 class="author-name">You can be next!</h6>
+                        </div>
+                    </div> <!-- single testimonial -->
+                </div>
+            </div> <!-- row -->
+
+            
+        </div> <!-- container -->
+    </section>
+
+    <!--====== TESTIMONIAL PART ENDS ======-->
+
+
+    <!--====== MENTOR SIGNUP PART START ======-->
+
+    <section class="call-action-area call-action-one pb-80" style="background-color: white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="call-action-content d-lg-flex justify-content-between align-items-center">
+                        <div class="call-action-text mt-50">
+                            <h2 class="action-title" style="font-size: 35px;">Interested in becoming a mentor?</h2>
+                            <p class="text" style="font-size: 15px;">There are many candidates looking for guidance from amazing mentors to get into their dream school! And you can help them!</p>
+                        </div>
+                        <div class="call-action-btn mt-50 ml-30 rounded-buttons">
+                            <a href="https://forms.gle/C8a3Q5kVYMFPovDh8" class="main-btn rounded-three" target="_blank">MBA - Sign Up</a>
+                        </div>
+                        <div class="call-action-btn mt-50 ml-30 rounded-buttons">
+                            <a href="https://forms.gle/VSr3unWys6uN5Y5j7" class="main-btn rounded-three" target="_blank">MS - Sign Up</a>
+                        </div>
+                    </div> <!-- call action content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== MENTOR SIGNUP PART ENDS ======-->
+
+
+   
+    <!--====== BLOG PART START ======-->
+
+    <section class="call-action-area call-action-two pt-60 pb-100" style="background-color: #f5f6f8;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="call-action-content mt-10">
+                        <h3 class="action-title">Get latest updates!</h3>
+                        <p class="text" style="font-size: 15px;">This is a one – stop free service where we keep you updated with all the important dates, content and news regarding your target colleges. 
+                        </p>
+                    </div> <!-- call action content -->
+                </div>
+                <div class="col-lg-7">
+                    <div class="call-action-form mt-10">
+                        <form action="{% url 'home' %}" method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-3">
+                                    <select name="degree" id="newsletter_degree" required>
+                                        <option value="" disabled selected hidden>Degree</option>
+                                        <option value="1">MBA</option>
+                                        <option value="2">MS</option>
+                                    </select>
+                                    <div id="err_newsletter_degree" style="color: red;font-size: 10px;"><span>* Required</span></div>
+                                </div>
+                                <div class="col-9">
+                                    <input type="text" name="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="action-btn rounded-buttons">
+                                    <button class="main-btn rounded-six" id="newsletter_button" name="blog_subscribe" type="submit"> <span><i class="lni-envelope"></i></span>subscribe</button>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div> <!-- call action form -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== BLOG PART ENDS ======-->
+
+
+
+    <!--====== FAQ PART START ======-->
+
+    <section id="faqs" class="about-area about-six" style="background-color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="faq-content mt-45">
+                        <div class="faq-title">
+                            <!-- <h6 class="sub-title">A Little More About Us</h6> -->
+                            <h3 class="title">Frequently Asked Questions(FAQs)</h3>
+                        </div> <!-- faq title -->
+                        <div class="faq-accordion">
+                            <div class="accordion" id="accordionExample">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Are mentors as good as consultants?</a>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <p class="text">
+                                                Here are the <a class="page-scroll" href="#testimonials">testimonials</a>. We’ve been doing this for 2 years and we are only growing. Mentors, specifically targeted mentors, basis your profile can deliver curated insights more valuable than a generic consultant. More than decorating your application with high – fi vocabulary and sentences, our focus is to create a compelling story from your resume for the admission committee.
+                                            </p>
+                                        </div>
+                                    </div> 
+                                </div> <!-- card -->
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What are the services I get?</a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <p class="text">When you’re still thinking to apply to a school – 
+                                                <br>Your mentor can review your profile and give inputs on your chances of getting through or the areas where you need to build it more.
+                                                <br><br>When you have written your first draft of the essay - 
+                                                <br>Your mentor can review it and discuss the gaps with you on a call. 
+                                                <br><br>When you have got an interview call – 
+                                                <br>Your mentor can conduct mock interviews over a video call.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> <!-- card -->
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How much does it cost?</a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <p class="text">
+                                                As a platform we take no charges or commissions from applicants or mentors.
+                                                <br><br>Mentors charge a negotiable price which is a fraction of the charges of similar services out there making us truly value for money!
+                                                <br><br>We help in negotiating the structure of support (no. of reviews / interviews) and the price between you and your mentor. We also keep your payment in escrow until the mentor delivers on their promise.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> <!-- card -->
+                                <!-- <div class="card">
+                                    <div class="card-header" id="headingFore">
+                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseFore" aria-expanded="false" aria-controls="collapseFore">Why are some identities hidden?</a>
+                                    </div>
+                                    <div id="collapseFore" class="collapse" aria-labelledby="headingFore" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <p class="text">Sometimes mentors tend to get spammed on LinkedIn after applicants find their profile on our platform. Hence, we keep their identity hidden. However, their profile is completely available for preview on our platform to ensure that they are a good fit. Once you fill the form, we will arrange a contact.</p>
+                                        </div>
+                                    </div>
+                                </div> card -->
+                                <div class="card">
+                                    <div class="card-header" id="headingFive">
+                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">I’m an MBA/MS student / alumnus and I want to sign up as a mentor</a>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <p class="text">For MBA, please fill this form - <a href="https://forms.gle/fwzXNPvh8JBkxCLVA" target="_blank">MBA Mentor Sign Up Form</a></p>
+                                            <p class="text" style="margin-top: 2%;">For MS, please fill this form - <a href="https://forms.gle/VSr3unWys6uN5Y5j7" target="_blank">MS Mentor Sign Up Form</a></p>
+                                        </div>
+                                    </div>
+                                </div> <!-- card -->
+                            </div>
+                        </div> <!-- faq accordion -->
+                    </div> <!-- faq content -->
+                </div>
+                <div class="col-lg-7">
+                    <div class="faq-image mt-50">
+                        <img src="{% static 'images/about/faq-1a.svg' %}" alt="faq">
+                    </div> <!-- faq image -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== FAQ PART ENDS ======-->
+
+
+
+    <!--====== CONTACT PART START ======-->
+
+    <section id="contact" class="contact-area pt-50 pb-100" style="background-color: #f5f6f8;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    {% if name %}
+                    <div class="section-title mt-45">
+                        <h4>We received your mail, {{ name }}. We'll get back to you soon!</h4>
+                    </div>
+                    {% else %}
+                    <div class="section-title mt-45">
+                        <h3 class="title">Send a pigeon&nbsp;&nbsp;<i class="lni lni-postcard"></i></h3>
+                    </div>
+                    {% endif %}
+                    <div class="contact-form form-style-four mt-15">
+                        <form action="{% url 'home' %}" method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-12" >
+                                    <div class="form-input mt-15">
+                                        <label>Full Name *</label>
+                                        <div class="input-items default">
+                                            <i class="lni-user"></i>
+                                            <input type="text" id="contactName" name="name" placeholder="Your Name" style="background-color: #f5f6f8;" required >
+                                        </div>
+                                    </div> <!-- form input -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-input mt-15">
+                                        <label>Email Address *</label>
+                                        <div class="input-items default">
+                                            <i class="lni-envelope"></i>
+                                            <input type="text" id="contactEmail" name="email" placeholder="Your Email ID" style="background-color: #f5f6f8;" required>
+                                        </div>
+                                    </div> <!-- form input -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-input mt-15">
+                                        <label>Phone Number *</label>
+                                        <div class="input-items default">
+                                            <i class="lni-phone-handset"></i>
+                                            <input type="text" id="contactNumber" name="number" placeholder="Your Phone Number" style="background-color: #f5f6f8;" required>
+                                        </div>
+                                    </div> <!-- form input -->
+                                </div>
+                                <!-- <div class="col-md-6">
+                                    <div class="form-input mt-15">
+                                        <label>Subject *</label>
+                                        <div class="input-items default">
+                                            <i class="lni-bubble"></i>
+                                            <input type="text" id="contactSubject" name="subject" placeholder="Subject Of Matter" required>
+                                        </div>
+                                    </div> 
+                                </div> -->
+                                <div class="col-md-12">
+                                    <div class="form-input mt-15">
+                                        <label>Your Message *</label>
+                                        <div class="input-items default">
+                                            <i class="lni-pencil-alt"></i>
+                                            <textarea name="message" id="contactMsg" placeholder="Your Message For Us" style="background-color: #f5f6f8;"></textarea>
+                                        </div>
+                                    </div> <!-- form input -->
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="single-form pt-25">
+                                        <div class="input-form rounded-buttons">
+                                            <button class="main-btn rounded-three" type="submit" onclick="btnClick()" name="mail_btn">SEND</button>
+                                        </div>
+                                        <div id="spinnerDiv" style="display: none;">
+                                            <span>Sending Pigeon...</span>
+                                            <div class="spinner-border text-warning" role="status">
+                                                <span class="sr-only">Loading...</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            
+                                        </div>
+                                    </div> <!-- single form -->
+                                </div>
+                            </div> <!-- row -->
+                        </form>
+                    </div> <!-- contact form -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-8 d-flex justify-content-center" >
+                    <img src="{% static 'images/getintouch-1.svg' %}" alt="Services" style="width: 100%;">
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== CONTACT PART ENDS ======-->
+
+
+    <!--====== FOOTER PART ONE START ======-->
+    
+    <section class="features-area features-nine mb-100">
+        <div class="container">
+            <div class="features-items pt-30">
+                <div class="row justify-content-between">
+                    <div class="col-lg-5">
+                        <div class="features-title mt-50">
+                            <h6 class="sub-title">YOU CAN HELP</h6>
+                            <h3 class="main-title mt-10">Help us keep<br> this community running</h3>
+                            <p class="text">We aim to keep this platform pocket friendly to help as many students as possible. You can help us keep it that way in 2 ways.</p>
+                        </div> <!-- section title -->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mt-100">
+                            <p class="paragraph-text-two">
+                                <div class="standard-buttons">
+                                    <i class="lni lni-coin"></i> Support&nbsp;&nbsp; -   &nbsp;&nbsp;
+                                    <a href="https://imjo.in/Aw3eKZ" class="main-btn standard-six sm-btn" target="_blank"> <span><i class="lni lni-heart-filled"></i></span>DONATE</a>                                </div>
+                            </p>
+                            <br><p class="paragraph-text-two">
+                                <i class="lni lni-twitter"></i> Spread the word&nbsp;&nbsp; -   &nbsp;&nbsp;
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://alumnextdoor.com/" target="_blank"><i class="lni-facebook-filled"></i></a>
+                                &nbsp;&nbsp;&nbsp;<a href="whatsapp://send?text=https://alumnextdoor.com/" data-action="share/whatsapp/share"><i class="lni lni-whatsapp"></i></a>
+                                &nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/shareArticle?mini=true&url=https://alumnextdoor.com/&title=&summary=&source=" target="_blank"><i class="lni-linkedin-original"></i></a>
+                                &nbsp;&nbsp;&nbsp;<a href="https://twitter.com/home?status=https://alumnextdoor.com/" target="_blank"><i class="lni-twitter-original"></i></a>
+                                &nbsp;&nbsp;&nbsp;<a href="mailto:info@example.com?&subject=&body=https://alumnextdoor.com/ " target="_blank"><i class="lni lni-envelope"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- features items -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== FOOTER PART ONE END ======-->
+
+
+
+    <!--====== FOOTER PART START ======-->
+
+    <section class="footer-area footer-five" style="background-color: #f5f6f8; padding-bottom: 5px;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="footer-logo text-center">
+                        <a href="index.html"><img src="{% static 'images/alumnextdoor-favicon.png' %}" alt="Logo" style="width: 60%; height: 60%;"></a>
+                    </div> <!-- footer logo -->
+                    <div class="footer-support text-center">
+                        <span><a href="" data-toggle="modal" data-target="#ourTeamModal">Our Team</a></span>
+                        <span><a href="" data-toggle="modal" data-target="#exampleModalLong">Our Data Policy</a></span>
+                        <span class="number pt-20">Reach us at : </span>
+                        <span class="number">+91 8830122576</span>
+                        <span class="mail">help@alumnextdoor.com</span>
+                        <ul class="social text-center mt-20">
+                            <li><a href="https://www.facebook.com/alumnextdoor" target="_blank"><i class="lni-facebook-filled"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/alum-next-door/" target="_blank"><i class="lni-linkedin-original"></i></a></li>
+                            <li><a href="https://twitter.com/alumnextdoor" target="_blank"><i class="lni-twitter-original"></i></a></li>
+                            <li><a href="https://www.instagram.com/alumnextdoor/" target="_blank"><i class="lni-instagram-original"></i></a></li>
+                        </ul> <!-- social -->
+                    </div>
+                    <div class="copyright text-center mt-35">
+                        <p class="text">Copyright © 2022 Alum Next Door. All Rights Reserved</p>
+                    </div> <!--  copyright -->
+                </div>
+
+
+                <!-- Our Data Policy Modal -->
+                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Data policy - Alum Next Door<br>
+                            Last edited date - 16 / 06 / 20</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <h6>What constitutes your data:</h6>
+                            Your application profile, your essays, your interview transcripts, general details like name, email, education, etc. constitutes your data.
+                            <br><br>
+                            <h6>Our data policy:</h6>
+                            We don’t share our data with anyone other than people working with us, who need access to it to help you or the community. We believe in transparency about who has access to your data and 
+                            <br><br>
+                            <h6>Access list:</h6>
+                                    • 3 Members of our team have access to your entire profile and all other information. This is because we engage with you or your profile at least once in your entire journey with us to understand your profile and figure out the best way to help you. These three members are:
+                                    <br><br>Aakrit Patel - <a href="https://www.linkedin.com/in/aakritpatel/" target="_blank"><i class="lni-linkedin-original"></i></a>
+                                    <br>Harsh Modi - <a href="https://www.linkedin.com/in/harshmodi97/" target="_blank"><i class="lni-linkedin-original"></i></a>
+                                    <br>Pratikshya Das - <a href="https://www.linkedin.com/in/pratikshya-das-842b9b139/" target="_blank"><i class="lni-linkedin-original"></i></a>
+                                    <br><br>
+
+                                    • Apart from this, we will be engaging with interns to help us with data uploading, sales calls, and content writing from time to time. We are maintaining a separate list of all such interns here who have had access to profiles (limited - one or few & open - all profiles access). 
+                                    Here is the list: <br>
+                                    *We don’t have any interns currently*
+                                    <br><br>
+                                    • The only way we monetize the data you share with us is by creating relevant and helpful content like essay compilations, interview transcripts, etc. Even then, we strip all such information that can be used to identify you as the source of the essay/interview. 
+                                    We also share a copy of the final content with you and take permission in writing from you to share it forward.
+
+                            <br><br>
+                            We don’t have any corporate sponsors currently and we monetize by selling our data, neither in bulk nor in parts. 
+                            If in the future we do choose to go this way, we will inform you about it and give you an option to opt-out of it.
+                            <br><br>
+                            We hope this helps and if you have any queries or complaints, please call us at - +91 - 8830122576 (Aakrit Patel) or WhatsApp on the same number or email us at help@alumnextdoor.com
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Our Team Modal -->
+                <div class="modal fade" id="ourTeamModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Our Team</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>We’re a small team who believes that the current admission consultancy market is not value for money. 
+                                So, we did something about it. 
+                            </p>
+                            <div class="col-xl-12 col-lg-12 col-sm-12">
+                                <section class="team-area">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="single-team mt-30 team-style-ten">
+                                                    <div class="row no-gutters align-items-center">
+                                                        <div class="col-sm-5">
+                                                            <div class="team-image">
+                                                                <img src="{% static 'images/team/mobile-aakrit.jpg' %}" alt="Team">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-7">
+                                                            <div class="team-content">
+                                                                <h6 class="name"><a>Aakrit Patel</a></h6>
+                                                                <!-- <span class="sub-title">Co-Founder</span> -->
+                                                                <ul class="social">
+                                                                    <li><a href="https://www.linkedin.com/in/aakritpatel/" target="_blank"><i class="lni-linkedin-original"></i></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- single team -->
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="single-team mt-30 team-style-ten">
+                                                    <div class="row no-gutters align-items-center">
+                                                        <div class="col-sm-5">
+                                                            <div class="team-image">
+                                                                <img src="{% static 'images/team/mobile-harsh.jpg' %}" alt="Team">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-7">
+                                                            <div class="team-content">
+                                                                <h4 class="name"><a>Harsh Modi</a></h4>
+                                                                <!-- <span class="sub-title">Co-Founder</span> -->
+                                                                <ul class="social">
+                                                                    <li><a href="https://www.linkedin.com/in/harshmodi97/" target="_blank"><i class="lni-linkedin-original"></i></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- single team -->
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="single-team mt-30 team-style-ten">
+                                                    <div class="row no-gutters align-items-center">
+                                                        <div class="col-sm-5">
+                                                            <div class="team-image">
+                                                                <img src="{% static 'images/team/pd.jpeg' %}" alt="Team">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-7">
+                                                            <div class="team-content">
+                                                                <h6 class="name"><a>Pratikshya Das</a></h6>
+                                                                <!-- <span class="sub-title">Co-Founder</span> -->
+                                                                <ul class="social">
+                                                                    <li><a href="https://www.linkedin.com/in/pratikshya-das-842b9b139/" target="_blank"><i class="lni-linkedin-original"></i></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- single team -->
+                                            </div>
+                                        </div> <!-- row -->
+                                    </div> <!-- container -->
+                                </section>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+
+
+
+
+    <!--====== Slick js ======-->
+    <script src="{% static 'js/slick.min.js' %}"></script>
+
+    <!--====== Isotope js ======-->
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+
+    <!--====== Images Loaded js ======-->
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+
+    <!--====== Magnific Popup js ======-->
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    
+    <!--====== Appear js ======-->
+    <script src="{% static 'js/jquery.appear.min.js' %}"></script>
+
+    <!--====== Counter Up js ======-->
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+
+    <!--====== Validator js ======-->
+    <script src="{% static 'js/validator.min.js' %}"></script>
+
+    <!--====== Nice Select js ======-->
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+
+    <!--====== CountDown js ======-->
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+
+    <!--====== Scrolling Nav js ======-->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/scrolling-nav.js' %}"></script>
+
+    <!--====== Main js ======-->
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!--====== Personal js ======-->
+    <script>
+        var industryValue;
+        var schoolValue;
+        var degreeValue;
+        var schoolmsValue;
+        var majormsValue;
+        
+        $(document).ready(function(){
+
+            $('#mba_dropdowns').hide();
+            $('#ms_dropdowns').hide();
+
+            $('.degree-menu li').click(function() {
+                var text = $(this).text(); // get text of the clicked item
+                degreeValue = $(this).val();
+                $(".degree-toggle").text(text); // set text text to the button (dropdown)
+                $("#err_degree").hide();
+                $("#AlumniListDiv").hide();
+
+                if(degreeValue == 1){
+                    $('#mba_dropdowns').show();
+                    $('#ms_dropdowns').hide();
+                }
+                else{
+                    $('#mba_dropdowns').hide();
+                    $('#ms_dropdowns').show();
+                }
+                    
+            });
+
+            // $('.industry-menu li').click(function() {
+            //     var text = $(this).text(); // get text of the clicked item
+            //     industryValue = $(this).val();
+            //     $(".industry-toggle").text(text); // set text text to the button (dropdown)
+            //     $("#err_industry").hide();
+            // });
+
+            $('.industry-menu').on("click","li",function() {
+                console.log("YAYAYA");
+                var text = $(this).text(); // get text of the clicked item
+                industryValue = $(this).val();
+                $(".industry-toggle").text(text); // set text text to the button (dropdown)
+                $("#err_industry").hide();
+            });
+
+            $('.school-menu li').click(function() {
+                var text = $(this).text(); // get text of the clicked item
+                schoolValue = $(this).val();
+                $(".school-toggle").text(text); // set text text to the button (dropdown)
+                $("#err_school").hide();
+
+                GetIndustries()
+            });
+
+            $('.schoolms-menu').on("click","li",function() {
+                // console.log("YAYAYA");
+                var text = $(this).text(); // get text of the clicked item
+                schoolmsValue = $(this).val();
+                $(".schoolms-toggle").text(text); // set text text to the button (dropdown)
+                $("#err_school_ms").hide();
+
+                
+            });
+
+            $('.majorms-menu li').click(function() {
+                var text = $(this).text(); // get text of the clicked item
+                majormsValue = $(this).val();
+                $(".majorms-toggle").text(text); // set text text to the button (dropdown)
+                $("#err_major_ms").hide();
+                schoolmsValue = null;
+                $(".schoolms-toggle").text("Select");
+                $("#AlumniListDiv").hide();
+                GetSchools()
+            }); 
+
+
+            $('#newsletter_degree').on("change", function(){
+                $("#err_newsletter_degree").hide();
+            });
+            
+        });
+
+
+        function GetIndustries() {
+
+            var schoolSelected = schoolValue;
+
+            $.ajax({
+                method: "POST",
+                url: "/GetIndustries/",
+                data: {
+                    "schoolSelected": schoolSelected,
+                },
+                success: function (response) {
+                    // console.log(response)
+                    $("#industry-ul").html("")
+                    
+                    // $("#majors").html("<li value='' selected hidden>Select Subject</li><li value='All'>All</li>")
+                    
+                    for (i = 0; i < JSON.parse(response).length; i++) {
+                        cit = document.createElement('li');
+                        cit.value = JSON.parse(response)[i][0]
+                        cit.innerHTML = JSON.parse(response)[i][1]
+                        $("#industry-ul").append(cit)
+                    }
+                }
+            })
+        }
+
+
+
+        function GetSchools() {
+
+            var majorSelected = majormsValue;
+
+            $.ajax({
+                method: "POST",
+                url: "/GetSchools/",
+                data: {
+                    "majorSelected": majorSelected,
+                },
+                success: function (response) {
+                    // console.log(response)
+                    $("#schoolms-ul").html("")
+                    
+                    // $("#majors").html("<li value='' selected hidden>Select Subject</li><li value='All'>All</li>")
+                    
+                    for (i = 0; i < JSON.parse(response).length; i++) {
+                        cit = document.createElement('li');
+                        cit.value = JSON.parse(response)[i][0]
+                        cit.innerHTML = JSON.parse(response)[i][1]
+                        $("#schoolms-ul").append(cit)
+                    }
+                }
+            })
+        }
+
+
+        function downloadClicked() {
+
+            var degree = degreeValue;
+            var school = schoolValue;
+            var industry = industryValue;
+            var school_ms =  schoolmsValue;
+            var major_ms = majormsValue
+
+            if (degree == null) {
+                $("#err_degree").show();
+            }
+            else if (degree == 1 && school == null) {
+                $("#err_school").show();
+            }
+            else if (degree == 1 && industry == null) {
+                $("#err_industry").show();
+            }
+            else if (degree == 2 && major_ms == null) {
+                $("#err_major_ms").show();
+            }
+            else if (degree == 2 && school_ms == null) {
+                $("#err_school_ms").show();
+            }
+            else if(degree == 1 && school != null && industry != null){
+                $.ajax({
+                    method: "POST",
+                    url: "/AlumniListView/",
+                    data: {
+                        "school": school,
+                        "industry": industry,
+                        "degree" : degree,
+                    },
+                    success: function (response) {
+                        $("#AlumniListDiv").show();
+                        $("#AlumniListDiv").html("")
+                        $("#AlumniListDiv").append(response)
+                    }
+                })
+            } 
+            else if(degree == 2 && school_ms != null && major_ms != null){
+                $.ajax({
+                    method: "POST",
+                    url: "/AlumniListView/",
+                    data: {
+                        "school_ms": school_ms,
+                        "major_ms": major_ms,
+                        "degree" : degree,
+                    },
+                    success: function (response) {
+                        $("#AlumniListDiv").show();
+                        $("#AlumniListDiv").html("")
+                        $("#AlumniListDiv").append(response)
+                    }
+                })
+            } 
+        }
+
+        function btnClick(){
+            if($('#contactName').val() != '' && $('#contactEmail').val() != '' && $('#contactSubject').val() != '' && $('#contactNumber').val() != '' && $('#contactMsg').val() != ''){
+                document.getElementById('spinnerDiv').style.display = "block";
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+User-Agent: *
+Disallow: /admin/
+Disallow: /static/fonts/
+Disallow: /static/js/
+Disallow: /static/css/
+Disallow: /static/scss/
+
+sitemap: https://alumnextdoor.com/sitemap.xml 
